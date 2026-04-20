@@ -217,17 +217,6 @@ const usaShadeProducts: ShadeProduct[] = [
     features: ["Multi-post engineered frame", "Massive coverage footprint", "Engineered for high wind zones (FL)", "Custom bay configurations", "Commercial / institutional grade"],
   },
   {
-    name: "Wave",
-    category: "Hip Structure",
-    desc: "Undulating multi-bay hip structure — dynamic look for schools and rec centers",
-    img: "https://www.usa-shade.com/wp-content/uploads/2023/11/encinalelementaryschoolwavejoined_hdpe_1.jpg",
-    longDesc: "The Wave links multiple hip shade bays in an undulating joined formation, creating a continuous covered walkway or outdoor cafeteria roof with a distinctive rhythmic silhouette. Popular at schools, rec centers, and any site needing large connected coverage with visual character.",
-    coverage: "600–2,000+ sq ft (joined)",
-    posts: "Multi-post",
-    bestFor: ["School cafeterias", "Outdoor walkways", "Recreation centers", "Joined corridor covers"],
-    features: ["Multiple joined hip bays", "Undulating wave profile", "Long continuous coverage", "HDPE UV-blocking fabric", "Can be extended with additional bays"],
-  },
-  {
     name: "Custom Tensioned Structure",
     category: "Hip Structure",
     desc: "Fully engineered bespoke shade — any shape, any size, any application",
@@ -265,6 +254,15 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 }
 
 function ProductModal({ product, onClose }: { product: ShadeProduct; onClose: () => void }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
@@ -323,11 +321,12 @@ function ProductModal({ product, onClose }: { product: ShadeProduct; onClose: ()
           ×
         </button>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0 }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 0 }}>
           {/* Image side */}
           <div style={{
             position: "relative", background: "#1a1a1a",
-            borderRadius: "16px 0 0 16px", minHeight: 320,
+            borderRadius: isMobile ? "16px 16px 0 0" : "16px 0 0 16px",
+            minHeight: isMobile ? 220 : 320,
             display: "flex", alignItems: "center", justifyContent: "center",
           }}>
             <Image
@@ -340,7 +339,7 @@ function ProductModal({ product, onClose }: { product: ShadeProduct; onClose: ()
           </div>
 
           {/* Info side */}
-          <div style={{ padding: "32px 28px 28px", overflow: "auto" }}>
+          <div style={{ padding: isMobile ? "20px 18px 24px" : "32px 28px 28px", overflow: "auto" }}>
             {/* Category badge */}
             <div style={{
               display: "inline-block",

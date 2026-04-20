@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, Suspense } from "react";
+import { useState, useCallback, useEffect, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useDropzone } from "react-dropzone";
 import { useSearchParams } from "next/navigation";
@@ -26,6 +26,13 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 
 function ContactForm() {
   const searchParams = useSearchParams();
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 560);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
   const productParam = searchParams.get("product") ?? "";
   const [files, setFiles] = useState<FilePreview[]>([]);
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -154,7 +161,7 @@ function ContactForm() {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
 
                 {/* Name + Email */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 16 }}>
                   <div>
                     <label style={{ display: "block", color: "#aaa", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
                       Full Name <span style={{ color: "#c0392b" }}>*</span>
@@ -182,7 +189,7 @@ function ContactForm() {
                 </div>
 
                 {/* Phone + Project Type */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 16 }}>
                   <div>
                     <label style={{ display: "block", color: "#aaa", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
                       Phone Number
