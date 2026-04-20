@@ -69,6 +69,17 @@ export default function AdminPage() {
     fetchSettings();
   }, [fetchInquiries, fetchSettings]);
 
+  const deleteInquiry = async (id: string) => {
+    if (!confirm("Delete this inquiry? This cannot be undone.")) return;
+    await fetch("/api/admin/inquiries", {
+      method: "DELETE",
+      headers: { "x-admin-token": token, "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    setInquiries((prev) => prev.filter((i) => i.id !== id));
+    if (selected?.id === id) setSelected(null);
+  };
+
   const updateStatus = async (id: string, status: string) => {
     await fetch(`/api/admin/inquiries/${id}`, {
       method: "PATCH",
@@ -289,10 +300,23 @@ export default function AdminPage() {
                     </div>
                   </div>
 
-                  <div style={{ marginTop: 16 }}>
+                  <div style={{ marginTop: 16, display: "flex", gap: 10, flexWrap: "wrap" }}>
                     <a href={`mailto:${selected.email}?subject=Re: ${selected.title}`} className="btn-primary" style={{ fontSize: 13, padding: "9px 18px" }}>
                       Reply via Email
                     </a>
+                    <button
+                      onClick={() => deleteInquiry(selected.id)}
+                      style={{
+                        padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 600,
+                        cursor: "pointer", border: "1px solid #c0392b44",
+                        background: "rgba(192,57,43,0.12)", color: "#e74c3c",
+                        transition: "all 0.15s",
+                      }}
+                      onMouseEnter={e => (e.currentTarget.style.background = "rgba(192,57,43,0.25)")}
+                      onMouseLeave={e => (e.currentTarget.style.background = "rgba(192,57,43,0.12)")}
+                    >
+                      Delete
+                    </button>
                   </div>
                 </motion.div>
               )}
