@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useDropzone } from "react-dropzone";
 import { useSearchParams } from "next/navigation";
@@ -24,7 +24,7 @@ interface FilePreview {
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
-export default function ContactPage() {
+function ContactForm() {
   const searchParams = useSearchParams();
   const productParam = searchParams.get("product") ?? "";
   const [files, setFiles] = useState<FilePreview[]>([]);
@@ -365,5 +365,13 @@ export default function ContactPage() {
         </div>
       </section>
     </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense>
+      <ContactForm />
+    </Suspense>
   );
 }
