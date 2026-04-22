@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="fireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0392b"/>
+      <stop offset="100%" style="stop-color:#f0a500"/>
+    </linearGradient>
+    <linearGradient id="fireGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b1a0e"/>
+      <stop offset="100%" style="stop-color:#c0392b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Icon mark: shield with dragon D -->
+  <g transform="translate(10, 8)">
+    <!-- Shield outer -->
+    <path d="M50,4 L90,4 Q96,4 96,10 L96,62 Q96,85 50,100 Q4,85 4,62 L4,10 Q4,4 10,4 Z"
+          fill="url(#fireGrad2)" stroke="#c0392b" stroke-width="1.5"/>
+    <!-- Shield inner highlight -->
+    <path d="M50,11 L83,11 Q88,11 88,16 L88,61 Q88,79 50,92 Q12,79 12,61 L12,16 Q12,11 17,11 Z"
+          fill="none" stroke="rgba(240,165,0,0.25)" stroke-width="1"/>
+
+    <!-- Dragon D letterform -->
+    <text x="50" y="72" text-anchor="middle"
+          font-family="Georgia, serif" font-size="62" font-weight="900"
+          fill="url(#fireGrad)" filter="url(#glow)">D</text>
+
+    <!-- Scale pattern lines on shield -->
+    <path d="M20,38 Q35,33 50,38 Q65,33 80,38" fill="none" stroke="rgba(192,57,43,0.3)" stroke-width="0.8"/>
+    <path d="M16,52 Q33,46 50,52 Q67,46 84,52" fill="none" stroke="rgba(192,57,43,0.3)" stroke-width="0.8"/>
+
+    <!-- Flame tips at top of shield -->
+    <path d="M35,4 Q38,-4 41,4" fill="#f0a500" opacity="0.7"/>
+    <path d="M50,4 Q53,-6 56,4" fill="#f0a500" opacity="0.9"/>
+    <path d="M62,4 Q65,-3 68,4" fill="#c0392b" opacity="0.6"/>
+  </g>
+
+  <!-- Text: Dragon Recreation -->
+  <g transform="translate(118, 0)">
+    <!-- DRAGON -->
+    <text x="0" y="52"
+          font-family="Georgia, serif" font-size="38" font-weight="900" letter-spacing="2"
+          fill="#f0f0f0">DRAGON</text>
+
+    <!-- Gold underline accent -->
+    <rect x="0" y="58" width="268" height="2.5" rx="1.5" fill="url(#fireGrad)"/>
+
+    <!-- RECREATION -->
+    <text x="1" y="82"
+          font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="7"
+          fill="#f0a500">RECREATION</text>
+
+    <!-- SERVICES -->
+    <text x="2" y="102"
+          font-family="Arial, sans-serif" font-size="11" font-weight="400" letter-spacing="9"
+          fill="#888888">SERVICES</text>
+  </g>
+</svg>
