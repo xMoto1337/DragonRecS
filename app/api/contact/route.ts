@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
     // Send email notification
     if (recipients.length > 0) {
       await getResend().emails.send({
-        from: "Dragon Recreation Services <onboarding@resend.dev>",
+        from: "Dragon Recreation Services <noreply@dragonrecreation.net>",
         to: recipients,
         replyTo: email,
         subject: `New Quote Request: ${title}`,
