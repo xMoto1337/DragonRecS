@@ -75,11 +75,11 @@ export default function Footer() {
               Contact Us
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <a href="tel:+1234567890" style={{ color: "#888", fontSize: 14, textDecoration: "none", display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ color: "#f0a500" }}>&#9742;</span> (000) 000-0000
+              <a href="tel:2395658645" style={{ color: "#888", fontSize: 14, textDecoration: "none", display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ color: "#f0a500" }}>&#9742;</span> 239-565-8645
               </a>
-              <a href="mailto:info@dragonrecreation.com" style={{ color: "#888", fontSize: 14, textDecoration: "none", display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ color: "#f0a500" }}>&#9993;</span> info@dragonrecreation.com
+              <a href="mailto:Stoney@dragonrecreation.com" style={{ color: "#888", fontSize: 14, textDecoration: "none", display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ color: "#f0a500" }}>&#9993;</span> Stoney@dragonrecreation.com
               </a>
               <div style={{ color: "#888", fontSize: 14, display: "flex", alignItems: "center", gap: 8 }}>
                 <span style={{ color: "#f0a500" }}>&#128205;</span> Florida &amp; Surrounding Areas

@@ -346,13 +346,13 @@ function ContactForm() {
               <div className="card" style={{ padding: 28 }}>
                 <h3 style={{ fontWeight: 700, color: "#f0f0f0", fontSize: 18, marginBottom: 16 }}>Contact Info</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                  <a href="tel:+1234567890" style={{ color: "#aaa", fontSize: 14, textDecoration: "none", display: "flex", gap: 10 }}>
+                  <a href="tel:2395658645" style={{ color: "#aaa", fontSize: 14, textDecoration: "none", display: "flex", gap: 10 }}>
                     <span style={{ color: "#f0a500" }}>&#9742;</span>
-                    (000) 000-0000
+                    239-565-8645
                   </a>
-                  <a href="mailto:info@dragonrecreation.com" style={{ color: "#aaa", fontSize: 14, textDecoration: "none", display: "flex", gap: 10 }}>
+                  <a href="mailto:Stoney@dragonrecreation.com" style={{ color: "#aaa", fontSize: 14, textDecoration: "none", display: "flex", gap: 10 }}>
                     <span style={{ color: "#f0a500" }}>&#9993;</span>
-                    info@dragonrecreation.com
+                    Stoney@dragonrecreation.com
                   </a>
                   <div style={{ color: "#aaa", fontSize: 14, display: "flex", gap: 10 }}>
                     <span style={{ color: "#f0a500" }}>&#128205;</span>
