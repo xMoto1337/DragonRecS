@@ -10,6 +10,10 @@ interface InquiryEmailData {
   name: string;
   email: string;
   phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
   projectType: string;
   title: string;
   message: string;
@@ -42,6 +46,10 @@ export function buildInquiryEmailHtml(data: InquiryEmailData): string {
         <tr><td style="padding:8px 0;color:#888;font-size:13px;width:130px;">Name</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;font-weight:600;">${data.name}</td></tr>
         <tr><td style="padding:8px 0;color:#888;font-size:13px;">Email</td><td style="padding:8px 0;"><a href="mailto:${data.email}" style="color:#f0a500;font-size:14px;">${data.email}</a></td></tr>
         <tr><td style="padding:8px 0;color:#888;font-size:13px;">Phone</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;">${data.phone || "—"}</td></tr>
+        <tr><td style="padding:8px 0;color:#888;font-size:13px;">Address</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;">${data.address || "—"}</td></tr>
+        <tr><td style="padding:8px 0;color:#888;font-size:13px;">City</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;">${data.city || "—"}</td></tr>
+        <tr><td style="padding:8px 0;color:#888;font-size:13px;">State</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;">${data.state || "—"}</td></tr>
+        <tr><td style="padding:8px 0;color:#888;font-size:13px;">Zip</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;">${data.zip || "—"}</td></tr>
         <tr><td style="padding:8px 0;color:#888;font-size:13px;">Project Type</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;">${data.projectType}</td></tr>
         <tr><td style="padding:8px 0;color:#888;font-size:13px;">Subject</td><td style="padding:8px 0;color:#f0f0f0;font-size:14px;font-weight:600;">${data.title}</td></tr>
       </table>

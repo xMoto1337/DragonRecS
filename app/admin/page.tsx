@@ -11,6 +11,10 @@ interface Inquiry {
   name: string;
   email: string;
   phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
   project_type: string;
   title: string;
   message: string;
@@ -242,6 +246,10 @@ export default function AdminPage() {
                       ["Name", selected.name],
                       ["Email", selected.email],
                       ["Phone", selected.phone || "—"],
+                      ["Address", selected.address || "—"],
+                      ["City", selected.city || "—"],
+                      ["State", selected.state || "—"],
+                      ["Zip", selected.zip || "—"],
                       ["Project Type", selected.project_type],
                       ["Date", formatDate(selected.created_at)],
                     ].map(([k, v]) => (

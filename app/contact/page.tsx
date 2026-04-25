@@ -71,6 +71,10 @@ function ContactForm() {
     data.append("name", (form.elements.namedItem("name") as HTMLInputElement).value);
     data.append("email", (form.elements.namedItem("email") as HTMLInputElement).value);
     data.append("phone", (form.elements.namedItem("phone") as HTMLInputElement).value);
+    data.append("address", (form.elements.namedItem("address") as HTMLInputElement).value);
+    data.append("city", (form.elements.namedItem("city") as HTMLInputElement).value);
+    data.append("state", (form.elements.namedItem("state") as HTMLInputElement).value);
+    data.append("zip", (form.elements.namedItem("zip") as HTMLInputElement).value);
     data.append("projectType", (form.elements.namedItem("projectType") as HTMLSelectElement).value);
     data.append("title", (form.elements.namedItem("title") as HTMLInputElement).value);
     data.append("message", (form.elements.namedItem("message") as HTMLTextAreaElement).value);
@@ -217,6 +221,60 @@ function ContactForm() {
                         <option key={t} value={t} style={{ background: "#1a1a1a" }}>{t}</option>
                       ))}
                     </select>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div>
+                  <label style={{ display: "block", color: "#aaa", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
+                    Project Address
+                  </label>
+                  <input
+                    name="address" type="text"
+                    placeholder="123 Main St"
+                    style={inputStyle}
+                    onFocus={e => (e.target.style.borderColor = "#f0a500")}
+                    onBlur={e => (e.target.style.borderColor = "#2a2a2a")}
+                  />
+                </div>
+
+                {/* City / State / Zip */}
+                <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "2fr 1fr 1fr", gap: 16 }}>
+                  <div>
+                    <label style={{ display: "block", color: "#aaa", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
+                      City
+                    </label>
+                    <input
+                      name="city" type="text"
+                      placeholder="Naples"
+                      style={inputStyle}
+                      onFocus={e => (e.target.style.borderColor = "#f0a500")}
+                      onBlur={e => (e.target.style.borderColor = "#2a2a2a")}
+                    />
+                  </div>
+                  <div>
+                    <label style={{ display: "block", color: "#aaa", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
+                      State
+                    </label>
+                    <input
+                      name="state" type="text"
+                      placeholder="FL"
+                      style={inputStyle}
+                      onFocus={e => (e.target.style.borderColor = "#f0a500")}
+                      onBlur={e => (e.target.style.borderColor = "#2a2a2a")}
+                    />
+                  </div>
+                  <div>
+                    <label style={{ display: "block", color: "#aaa", fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
+                      Zip Code
+                    </label>
+                    <input
+                      name="zip" type="text"
+                      placeholder="34102"
+                      style={inputStyle}
+                      onFocus={e => (e.target.style.borderColor = "#f0a500")}
+                      onBlur={e => (e.target.style.borderColor = "#2a2a2a")}
+                    />
                   </div>
                 </div>
 

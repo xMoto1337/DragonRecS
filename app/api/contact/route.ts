@@ -11,6 +11,10 @@ export async function POST(req: NextRequest) {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const phone = (formData.get("phone") as string) || "";
+    const address = (formData.get("address") as string) || "";
+    const city = (formData.get("city") as string) || "";
+    const state = (formData.get("state") as string) || "";
+    const zip = (formData.get("zip") as string) || "";
     const projectType = formData.get("projectType") as string;
     const title = formData.get("title") as string;
     const message = formData.get("message") as string;
@@ -53,6 +57,10 @@ export async function POST(req: NextRequest) {
         name,
         email,
         phone,
+        address,
+        city,
+        state,
+        zip,
         project_type: projectType,
         title,
         message,
@@ -89,6 +97,10 @@ export async function POST(req: NextRequest) {
           name,
           email,
           phone,
+          address,
+          city,
+          state,
+          zip,
           projectType,
           title,
           message,
