@@ -134,10 +134,9 @@ export default function ServicesPage() {
           <div className="section-wrap">
             <div style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: 64,
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 40,
               alignItems: "center",
-              flexDirection: i % 2 === 0 ? "row" : "row-reverse",
             }}>
               {/* Text */}
               <FadeUp delay={0.1}>

@@ -482,7 +482,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.6 }}
-              style={{ fontSize: 20, color: "#888", lineHeight: 1.6, maxWidth: 580, marginBottom: 40 }}
+              style={{ fontSize: "clamp(15px, 2.5vw, 20px)", color: "#888", lineHeight: 1.6, maxWidth: 580, marginBottom: 40 }}
             >
               Dragon Recreation Services is your authorized local installer for USA Shade &amp; Fabric Structures products — plus pavillions, sports court coatings, and more. We handle the full install so you get a world-class product, professionally done.
             </motion.p>
@@ -491,12 +491,12 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              style={{ display: "flex", gap: 16, flexWrap: "wrap" }}
+              style={{ display: "flex", gap: 12, flexWrap: "wrap" }}
             >
-              <Link href="/contact" className="btn-primary" style={{ fontSize: 16, padding: "14px 28px" }}>
+              <Link href="/contact" className="btn-primary" style={{ fontSize: 15, padding: "13px 24px" }}>
                 Get a Free Quote →
               </Link>
-              <Link href="/gallery" className="btn-outline" style={{ fontSize: 16, padding: "14px 28px" }}>
+              <Link href="/gallery" className="btn-outline" style={{ fontSize: 15, padding: "13px 24px" }}>
                 View Our Work
               </Link>
             </motion.div>
