@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 130" width="480" height="130">
+  <defs>
+    <linearGradient id="fireC" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c0392b"/>
+      <stop offset="100%" stop-color="#f0a500"/>
+    </linearGradient>
+    <filter id="glowC">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ICON: Dragon wing / scale shield -->
+  <g transform="translate(6, 8)">
+    <!-- Outer wing shape left -->
+    <path d="M50,8 C30,8 8,20 8,45 C8,65 22,80 50,90 C78,80 92,65 92,45 C92,20 70,8 50,8 Z"
+          fill="#0f0404" stroke="#2a1212" stroke-width="1.5"/>
+
+    <!-- Dragon scale rows -->
+    <!-- Row 1 -->
+    <path d="M35,25 Q43,18 50,25 Q57,18 65,25 Q57,32 50,25 Q43,32 35,25Z" fill="url(#fireC)" opacity="0.9" filter="url(#glowC)"/>
+    <!-- Row 2 -->
+    <path d="M25,40 Q34,32 42,40" fill="none" stroke="url(#fireC)" stroke-width="2" opacity="0.7"/>
+    <path d="M42,40 Q50,32 58,40" fill="none" stroke="url(#fireC)" stroke-width="2" opacity="0.7"/>
+    <path d="M58,40 Q66,32 75,40" fill="none" stroke="url(#fireC)" stroke-width="2" opacity="0.7"/>
+    <!-- Row 3 -->
+    <path d="M20,54 Q31,46 42,54" fill="none" stroke="#f0a500" stroke-width="1.5" opacity="0.5"/>
+    <path d="M42,54 Q50,46 62,54" fill="none" stroke="#f0a500" stroke-width="1.5" opacity="0.5"/>
+    <path d="M62,54 Q71,46 80,54" fill="none" stroke="#f0a500" stroke-width="1.5" opacity="0.5"/>
+    <!-- Row 4 -->
+    <path d="M25,67 Q36,59 47,67" fill="none" stroke="#c0392b" stroke-width="1" opacity="0.4"/>
+    <path d="M47,67 Q55,59 66,67" fill="none" stroke="#c0392b" stroke-width="1" opacity="0.4"/>
+    <path d="M30,78 Q40,70 50,78 Q60,70 70,78" fill="none" stroke="#c0392b" stroke-width="1" opacity="0.3"/>
+
+    <!-- Flame tip at top -->
+    <path d="M44,8 Q47,0 50,8" fill="#f0a500" opacity="0.9"/>
+    <path d="M50,8 Q53,1 56,8" fill="#c0392b" opacity="0.8"/>
+
+    <!-- Center gem -->
+    <circle cx="50" cy="25" r="4" fill="#f0a500" filter="url(#glowC)"/>
+    <circle cx="50" cy="25" r="2" fill="white" opacity="0.8"/>
+  </g>
+
+  <!-- Text -->
+  <g transform="translate(114, 18)">
+    <text x="0" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="900" letter-spacing="1" fill="#f0f0f0">DRAGON</text>
+    <rect x="0" y="56" width="330" height="3" rx="1.5" fill="url(#fireC)"/>
+    <text x="2" y="80" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="10" fill="#f0a500">RECREATION</text>
+    <text x="2" y="100" font-family="Arial, sans-serif" font-size="11" font-weight="400" letter-spacing="12" fill="#666">SERVICES</text>
+  </g>
+</svg>
