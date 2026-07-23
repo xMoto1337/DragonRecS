@@ -24,9 +24,9 @@ const services = [
   {
     id: "shade-structures",
     title: "Fabric Shade Structures",
-    tagline: "Authorized installer of USA Shade & Fabric Structures products",
+    tagline: "Premium fabric shade structure installation",
     description:
-      "We are an authorized installer for USA Shade & Fabric Structures — one of the largest shade manufacturers in North America with over 300,000 structures installed since 1991. We don't manufacture the structures ourselves; we specialize in professional installation so you get a world-class product, properly engineered and correctly installed. Available systems include single-post, multi-post, cantilever, butterfly wings, hip style, pyramid, sail, and large tensioned architectural shade for any site.",
+      "We specialize in professional installation of premium fabric shade structures so you get a world-class product, properly engineered and correctly installed. Available systems include single-post, multi-post, cantilever, butterfly wings, hip style, pyramid, sail, and large tensioned architectural shade for any site.",
     features: [
       "Single-post, multi-post, hip, and cantilever styles",
       "Butterfly Wings, Mariner Peak, Arbor, and specialty designs",
@@ -77,9 +77,9 @@ const services = [
     title: "Shade Replacement",
     tagline: "New fabric, existing frame — like new again",
     description:
-      "UV exposure, wind, and time will eventually wear out shade fabric — but that doesn't mean replacing the whole structure. We supply and install replacement fabric panels for virtually any existing shade system, including USA Shade products and other brands. We'll inspect the frame, source the right fabric, and have your shade looking and performing like new.",
+      "UV exposure, wind, and time will eventually wear out shade fabric — but that doesn't mean replacing the whole structure. We supply and install replacement fabric panels for virtually any existing shade system, regardless of original manufacturer. We'll inspect the frame, source the right fabric, and have your shade looking and performing like new.",
     features: [
-      "Compatible with USA Shade and most other brands",
+      "Compatible with most manufacturers' shade systems",
       "HDPE mesh and PVC-coated waterproof fabric options",
       "Wide selection of replacement colors",
       "Frame inspection included",
